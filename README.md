@@ -1,3 +1,6 @@
+以下のように、ファイル名を指定して、commandを実行してください
+python test.py --input_file='ファイル名'
+
 # FizzBuzz問題
 
 ## 内容
