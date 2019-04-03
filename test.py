@@ -1,6 +1,7 @@
 """
 ここに解答コードを書いてください
 """
+import argparse
 
 def dictionary_data(data):
     dict_data = {}
@@ -24,5 +25,9 @@ def fizzbuzz_extension(sorted_data, number):
         return answer_str
 
 if __name__ == '__main__':
-    data = open('input.txt', mode='r').readlines()
+    parser = argparse.ArgumentParser(description='parameter for selecting input file')
+    parser.add_argument('--input_file=', type=str, dest='input_file')
+    args = parser.parse_args()
+
+    data = open(args.input_file, mode='r').readlines()
     print(fizzbuzz_extension(sort_dict_data(data), data[-1].rstrip('\n')))
